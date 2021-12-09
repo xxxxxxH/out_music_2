@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/img_main_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/gradient1" />
+
+    <com.jetradarmobile.snowfall.SnowfallView
+        android:id="@+id/snowfallview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:snowflakeAlphaMax="255"
+        app:snowflakeAlphaMin="150"
+        app:snowflakeAngleMax="5"
+        app:snowflakeImage="@mipmap/transheartflake"
+        app:snowflakeSizeMax="40dp"
+        app:snowflakeSizeMin="8dp"
+        app:snowflakeSpeedMax="12"
+        app:snowflakeSpeedMin="4"
+        app:snowflakesAlreadyFalling="false"
+        app:snowflakesFadingEnabled="true"
+        app:snowflakesNum="250" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        app:tl_indicator_color="@color/colorAccent"
+        app:tl_indicator_height="2dp"
+        app:tl_indicator_width="20dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/colorAccent"
+        app:tl_textUnselectColor="@color/transparent_text" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:src="@mipmap/menu"
+                android:scaleType="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:text="@string/app_name"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>
