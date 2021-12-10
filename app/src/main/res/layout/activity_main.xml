@@ -45,10 +45,11 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:layout_below="@+id/tool"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab" />
+        android:layout_above="@+id/tab"
+        android:layout_below="@+id/tool" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool"
         android:layout_width="match_parent"
@@ -62,17 +63,25 @@
             <ImageView
                 android:layout_width="?actionBarSize"
                 android:layout_height="match_parent"
-                android:src="@mipmap/menu"
-                android:scaleType="center"/>
+                android:scaleType="center"
+                android:src="@mipmap/menu" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="?actionBarSize"
-                android:text="@string/app_name"
                 android:fontFamily="sans-serif-black"
-                android:textColor="@color/white"
                 android:gravity="center"
-                android:textSize="20sp"/>
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab">
+
+        <include layout="@layout/layout_float" />
+    </FrameLayout>
 </RelativeLayout>
