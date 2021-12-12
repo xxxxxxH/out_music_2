@@ -1,15 +1,11 @@
 package net.entity
 
 import android.net.Uri
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 
-/**
- * Copyright (C) 2021,2021/12/10, a Tencent company. All rights reserved.
- *
- * User : v_xhangxie
- *
- * Desc :
- */
+@Parcelize
 data class SongEntity(
     var songId: Long = 0,
     var album: String = "",
@@ -25,4 +21,4 @@ data class SongEntity(
     var trackNumber: Int = 0,
     var artistId: Long = 0,
     var date: Int = 0
-) : Serializable
+) : Serializable,Parcelable

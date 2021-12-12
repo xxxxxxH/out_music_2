@@ -3,16 +3,10 @@ package net.utils
 import android.media.AudioManager
 import android.media.MediaPlayer
 
-/**
- * Copyright (C) 2021,2021/12/10, a Tencent company. All rights reserved.
- *
- * User : v_xhangxie
- *
- * Desc :
- */
+
 class MediaPlayerManager {
     private val mediaPlayer: MediaPlayer = MediaPlayer()
-    var musicPath:String?=null
+    var musicPath: String? = null
 
     companion object {
         private var i: MediaPlayerManager? = null
@@ -29,7 +23,7 @@ class MediaPlayerManager {
         }
     }
 
-    fun getMediaPlayer():MediaPlayer{
+    fun getMediaPlayer(): MediaPlayer {
         return mediaPlayer
     }
 
@@ -64,14 +58,14 @@ class MediaPlayerManager {
         return mediaPlayer.currentPosition
     }
 
-    fun duration():Int{
+    fun duration(): Int {
         return mediaPlayer.duration
     }
 
     fun getCurrentPercent(): Int {
         val total = mediaPlayer.duration
         val current = mediaPlayer.currentPosition
-        return current*100 / total
+        return current * 100 / total
     }
 
 }

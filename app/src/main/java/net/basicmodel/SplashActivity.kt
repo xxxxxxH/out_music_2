@@ -16,6 +16,7 @@ class SplashActivity : AppCompatActivity() {
             super.handleMessage(msg)
             if (msg.what == 0){
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                finish()
             }
         }
     }

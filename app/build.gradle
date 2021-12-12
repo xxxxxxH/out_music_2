@@ -48,4 +48,7 @@ dependencies {
     implementation 'com.github.open-android:RoundedImageView:v1.0.0'
     implementation 'com.github.jetradarmobile:android-snowfall:1.1.6'
     implementation 'com.cpacm:floatingmusicmenu:1.1.0'
+    implementation "androidx.slidingpanelayout:slidingpanelayout:1.2.0-beta01"
+    implementation 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer:v8.1.5-jitpack'
+    implementation 'com.wdullaer:materialdatetimepicker:2.3.0'
 }

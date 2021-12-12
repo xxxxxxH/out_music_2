@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">My Photo Music Player</string>
+    <string name="proparty">Property</string>
+    <string name="add_to_playlist">Add to Playlist</string>
+    <string name="share">Share</string>
+    <string name="share_app_msg">Hi! I\'m using a fabulous Video and Music player application. Just try it.</string>
+    <string name="main_title">General</string>
+    <string name="sub_title_one">Clear cache</string>
+    <string name="sub_title_two">Check cache usage</string>
+    <string name="sub_title_three">Clear history</string>
+    <string name="sub_title_one_summary">Clear locally cached content</string>
+    <string name="sub_title_two_summary">check for locally cached content size</string>
+    <string name="sub_title_three_summary">clear all songs history</string>
+    <string name="second_title">Advanced</string>
+    <string name="third_title">Music Player</string>
+    <string name="fourth_title">About App</string>
+    <string name="change_theme">Change Theme</string>
+    <string name="change_theme_msg">Change Background,animation,transparency and also add your photo</string>
+    <string name="sub_title_three3">Show widget</string>
+    <string name="sub_title_one11">Version</string>
+    <string name="title_time">Set sleep time</string>
+    <string name="title_snow">Background Animation Effect</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="relevant_ads">Change Relevant Ads Show</string>
+    <string name="total_songs">Total songs : </string>
 </resources>

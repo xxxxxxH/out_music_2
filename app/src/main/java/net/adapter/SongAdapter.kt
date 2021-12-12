@@ -10,14 +10,7 @@ import net.basicmodel.R
 import net.entity.SongEntity
 import net.utils.ScreenUtils
 
-/**
- * Copyright (C) 2021,2021/12/10, a Tencent company. All rights reserved.
- *
- * User : v_xhangxie
- *
- * Desc :
- */
-class SongAdapter(data: ArrayList<SongEntity>, val activity: Activity) :
+class SongAdapter(data: ArrayList<SongEntity>, val activity: Activity, val isMore: Boolean) :
     BaseQuickAdapter<SongEntity, BaseViewHolder>(R.layout.layout_item_song, data) {
     override fun convert(holder: BaseViewHolder, item: SongEntity) {
         holder.getView<RelativeLayout>(R.id.root).let {
@@ -31,9 +24,10 @@ class SongAdapter(data: ArrayList<SongEntity>, val activity: Activity) :
                 width = ScreenUtils.getScreenSize(activity)[1] / 4
                 height = ScreenUtils.getScreenSize(activity)[1] / 4
             }
-            Glide.with(activity).load(item.img_uri).into(it)
+            Glide.with(activity).load(item.img_uri).placeholder(R.mipmap.splash_icon).into(it)
         }
         holder.setText(R.id.song, item.title)
             .setText(R.id.artist, item.artist)
+            .setGone(R.id.more, isMore)
     }
 }
